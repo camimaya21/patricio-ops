@@ -12,12 +12,9 @@ const REDIRECT_URL = process.env.REDIRECT_URL
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
-app.get('/google', function (req, res) {
-  res.render('pages/google')
-})
-
 app.get('/', function (req, res) {
-  res.render('pages/auth')
+  console.log(`id=${req.query.id}`)
+  res.render('pages/login')
 })
 
 // const options = {

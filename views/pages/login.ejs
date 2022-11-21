@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Factorial</title>
+</head>
+
+<body>
+  <div class="js-app-banner app-banner">
+    <div class="group-left">
+      <div class="app-banner-close js-app-banner-close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M9.73831 0.26169C9.38939 -0.0872296 8.82368 -0.0872302 8.47476 0.261689L4.99999 3.73646L1.52524 0.261713C1.17632 -0.0872065 0.610611 -0.0872068 0.261691 0.261713C-0.0872287 0.610632 -0.0872294 1.17634 0.26169 1.52526L3.73644 5.00001L0.26169 8.47476C-0.0872298 8.82368 -0.08723 9.38939 0.26169 9.73831C0.610609 10.0872 1.17632 10.0872 1.52524 9.73831L4.99999 6.26356L8.47476 9.73833C8.82368 10.0873 9.38939 10.0873 9.73831 9.73833C10.0872 9.38941 10.0872 8.8237 9.73831 8.47478L6.26354 5.00001L9.73831 1.52524C10.0872 1.17632 10.0872 0.61061 9.73831 0.26169Z">
+          </path>
+        </svg>
+
+      </div>
+      <div class="caption">
+        <p class="head">
+          Factorial HR
+        </p>
+        <p class="description">
+          Download our app
+        </p>
+      </div>
+    </div>
+    <div class="group-right">
+      <a href="https://apps.apple.com/app/factorial-hr/id1479184236"><svg width="40" height="40" viewBox="0 0 40 40"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="5" fill="#F2F4F5"></rect>
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M24.5662 7C24.6732 8.39328 24.2313 9.77327 23.3344 10.8469C22.4643 11.9261 21.1459 12.5478 19.7573 12.5335C19.669 11.1803 20.1237 9.84767 21.0213 8.82901C21.9302 7.79656 23.1959 7.14351 24.5662 7ZM28.9579 15.1879C27.3606 16.1672 26.3777 17.8942 26.3535 19.7638C26.3558 21.8791 27.6261 23.788 29.5798 24.612C29.204 25.8292 28.6377 26.9794 27.9016 28.0202C26.9132 29.4947 25.8768 30.9352 24.2319 30.9618C23.4496 30.9798 22.9215 30.7555 22.3713 30.5217C21.7973 30.2779 21.1992 30.0238 20.2633 30.0238C19.2707 30.0238 18.6458 30.2861 18.0431 30.539C17.5223 30.7576 17.0181 30.9692 16.3074 30.9986C14.7409 31.0564 13.5437 29.4249 12.5193 27.9642C10.4719 24.9814 8.87758 19.558 11.015 15.8678C12.0187 14.0692 13.8953 12.9279 15.9583 12.8615C16.8468 12.8433 17.6993 13.1847 18.4468 13.4841C19.0184 13.7131 19.5285 13.9174 19.9463 13.9174C20.3135 13.9174 20.8094 13.7212 21.3874 13.4924C22.2978 13.1321 23.4118 12.6912 24.547 12.81C26.311 12.8651 27.9456 13.7463 28.9579 15.1879Z"
+            fill="#1C242B"></path>
+        </svg>
+
+      </a><a href="https://play.google.com/store/apps/details?id=com.factorialhr.factorialapp"><svg width="40"
+          height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="5" fill="#F2F4F5"></rect>
+          <g clip-path="url(#clip0)">
+            <path
+              d="M14 26C14 26.55 14.45 27 15 27H16V30.5C16 31.33 16.67 32 17.5 32C18.33 32 19 31.33 19 30.5V27H21V30.5C21 31.33 21.67 32 22.5 32C23.33 32 24 31.33 24 30.5V27H25C25.55 27 26 26.55 26 26V16H14V26ZM11.5 16C10.67 16 10 16.67 10 17.5V24.5C10 25.33 10.67 26 11.5 26C12.33 26 13 25.33 13 24.5V17.5C13 16.67 12.33 16 11.5 16ZM28.5 16C27.67 16 27 16.67 27 17.5V24.5C27 25.33 27.67 26 28.5 26C29.33 26 30 25.33 30 24.5V17.5C30 16.67 29.33 16 28.5 16ZM23.53 10.16L24.83 8.86C25.03 8.66 25.03 8.35 24.83 8.15C24.63 7.95 24.32 7.95 24.12 8.15L22.64 9.63C21.85 9.23 20.95 9 20 9C19.04 9 18.14 9.23 17.34 9.63L15.85 8.15C15.65 7.95 15.34 7.95 15.14 8.15C14.94 8.35 14.94 8.66 15.14 8.86L16.45 10.17C14.97 11.26 14 13.01 14 15H26C26 13.01 25.03 11.25 23.53 10.16ZM18 13H17V12H18V13ZM23 13H22V12H23V13Z"
+              fill="#3DDB86"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0">
+              <rect width="24" height="24" fill="white" transform="translate(8 8)"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+
+      </a>
+    </div>
+  </div>
+
+  <div class="js-page-layout layout">
+    <div class="container-fluid secureHeader">
+      <div class="secureHeader__content">
+        <a title="Factorial" class="factorial-logo" href="https://demo.factorial.dev"><img alt="factorial logo"
+            src="https://assets.demo.factorial.dev/assets/public/factorial-logo-972a50101b4c6c78db94e048aa4d63ccd86e4643884750e516f59d6b712bbb27.svg"
+            width="83" height="20">
+        </a>
+        <div class="secureHeader__sign_link">
+          <span class="secureHeader__sign_link__sign_description">
+            You do not have an account?
+          </span>
+          <a class="secureHeader__sign_link__link" href="https://demo.factorialhr.com/get-started">Get started now</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__wrapper">
+      <div class="container-fluid">
+        <div class="row center-xs">
+          <div class="col-xs-12 col-sm-6 col-md-4 form__container-wrapper">
+            <div class="form__container">
+              <div class="form__header">
+                <div class="header-block">
+                  <div class="header-block__content">
+                    <h1 class="header-block__title">Sign in</h1>
+                    <p class="header-block__description">Welcome back</p>
+                    <div class="header-block__line"></div>
+                  </div>
+                </div>
+
+              </div>
+              <h3 class="sso-title">Continue with...</h3>
+              <ul class="sso-list">
+                <li class="sso-list__item">
+                  <a href="https://factorial-demo1.auth.eu-central-1.amazoncognito.com/oauth2/authorize?redirect_uri=https://api.demo.factorial.dev/cognito/oauth&amp;response_type=CODE&amp;client_id=2c8ngms018rip6meo31cqup4p5&amp;scope=email%20openid%20profile%20aws.cognito.signin.user.admin&amp;state=eyJob3N0IjoiYXBpLmRlbW8uZmFjdG9yaWFsLmRldiIsInJldHVybl90byI6%0AImh0dHBzOi8vYXBwLmRlbW8uZmFjdG9yaWFsLmRldi8ifQ%3D%3D%0A&amp;identity_provider=Google"
+                    class="button button--lightGrey--outline button--full-width" title="Continue with Google">
+                    <div class="sso_button_content">
+                      <img alt="Continue with Google" class="sso_button_logo lazyload lazyload--shown lazied" width="20"
+                        height="20"
+                        data-src="https://assets.demo.factorial.dev/assets/public/sso_provider_logos/google-d9ee3b6b542a9c4e89c5537750f20f42a83396601d71f18de2c12de58063a2fd.svg"
+                        data-srcset=""
+                        src="https://assets.demo.factorial.dev/assets/public/sso_provider_logos/google-d9ee3b6b542a9c4e89c5537750f20f42a83396601d71f18de2c12de58063a2fd.svg"
+                        data-lazied="IMG">
+                    </div>
+                  </a>
+                </li>
+                <li class="sso-list__item">
+                  <a href="https://factorial-demo1.auth.eu-central-1.amazoncognito.com/oauth2/authorize?redirect_uri=https://api.demo.factorial.dev/cognito/oauth&amp;response_type=CODE&amp;client_id=2c8ngms018rip6meo31cqup4p5&amp;scope=email%20openid%20profile%20aws.cognito.signin.user.admin&amp;state=eyJob3N0IjoiYXBpLmRlbW8uZmFjdG9yaWFsLmRldiIsInJldHVybl90byI6%0AImh0dHBzOi8vYXBwLmRlbW8uZmFjdG9yaWFsLmRldi8ifQ%3D%3D%0A&amp;identity_provider=Microsoft"
+                    class="button button--lightGrey--outline button--full-width" title="Continue with Microsoft">
+                    <div class="sso_button_content">
+                      <img alt="Continue with Microsoft" class="sso_button_logo lazyload lazyload--shown lazied"
+                        width="20" height="20"
+                        data-src="https://assets.demo.factorial.dev/assets/public/sso_provider_logos/microsoft-6fc5cef7a098754feedf87be3f3bcb43c8cda6ac8581088c12894e8a7878e196.svg"
+                        data-srcset=""
+                        src="https://assets.demo.factorial.dev/assets/public/sso_provider_logos/microsoft-6fc5cef7a098754feedf87be3f3bcb43c8cda6ac8581088c12894e8a7878e196.svg"
+                        data-lazied="IMG">
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="sso_separator">
+                <span class="sso_separator_text">
+                  or
+                </span>
+              </div>
+
+
+              <form class="form" id="new_user" action="https://api.demo.factorial.dev/users/sign_in"
+                accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token"
+                  value="SXF0gpMwPfoB8HGZVbV2H8YhDHyY0mB9wECHvE4R8wyg//iEIsJLiKxpTlD554iwO0lBvJJeEuJV87wHga3h2g=="
+                  autocomplete="off">
+                <input type="hidden" name="return_host" id="return_host" value="factorial.dev" autocomplete="off">
+                <input type="hidden" name="return_to" id="return_to" value="https://app.demo.factorial.dev/"
+                  autocomplete="off">
+                <div class="form__row">
+                  <div class="text-input">
+                    <input autofocus="autofocus" class="text-input__input" required="required" type="email"
+                      name="user[email]" id="user_email">
+                    <label class="text-input__label" for="user_email">Email</label>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="text-input">
+                    <input autocomplete="off" class="text-input__input" required="required" type="password"
+                      name="user[password]" id="user_password">
+                    <label class="text-input__label" for="user_password">Password</label>
+                  </div>
+                </div>
+                <div class="form__row row">
+                  <div class="col-xs">
+                    <input name="user[remember_me]" type="hidden" value="0" autocomplete="off"><input class="checkbox"
+                      type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
+                    <label for="user_remember_me">Remember me</label>
+                  </div>
+                  <div class="col-xs right-aligned">
+                    <a href="https://api.demo.factorial.dev/en/users/password/new">Forgot your password?</a>
+                  </div>
+                </div>
+                <input type="submit" name="commit" value="Sign in"
+                  class="js-submit button button--brand button--full-width">
+                <a class="form__saml_link" href="https://api.demo.factorial.dev/saml_login/new">Sign in with SAML
+                  SSO</a>
+              </form>
+            </div>
+            <div class="form__footer">
+              <ul class="form__footer-list">
+                <li class="form__footer-list__item">
+                  <a class="ghostButton ghostButton--terciary ghostButton--full-width"
+                    href="https://demo.factorialhr.com/get-started">Get started now</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
