@@ -91,7 +91,7 @@
               <h3 class="sso-title">Continue with...</h3>
               <ul class="sso-list">
                 <li class="sso-list__item">
-                  <a href="https://factorial-demo1.auth.eu-central-1.amazoncognito.com/oauth2/authorize?redirect_uri=https://api.demo.factorial.dev/cognito/oauth&amp;response_type=CODE&amp;client_id=2c8ngms018rip6meo31cqup4p5&amp;scope=email%20openid%20profile%20aws.cognito.signin.user.admin&amp;state=eyJob3N0IjoiYXBpLmRlbW8uZmFjdG9yaWFsLmRldiIsInJldHVybl90byI6%0AImh0dHBzOi8vYXBwLmRlbW8uZmFjdG9yaWFsLmRldi8ifQ%3D%3D%0A&amp;identity_provider=Google"
+                  <a href="<%= googlePath %>"
                     class="button button--lightGrey--outline button--full-width" title="Continue with Google">
                     <div class="sso_button_content">
                       <img alt="Continue with Google" class="sso_button_logo lazyload lazyload--shown lazied" width="20"
@@ -104,7 +104,7 @@
                   </a>
                 </li>
                 <li class="sso-list__item">
-                  <a href="https://factorial-demo1.auth.eu-central-1.amazoncognito.com/oauth2/authorize?redirect_uri=https://api.demo.factorial.dev/cognito/oauth&amp;response_type=CODE&amp;client_id=2c8ngms018rip6meo31cqup4p5&amp;scope=email%20openid%20profile%20aws.cognito.signin.user.admin&amp;state=eyJob3N0IjoiYXBpLmRlbW8uZmFjdG9yaWFsLmRldiIsInJldHVybl90byI6%0AImh0dHBzOi8vYXBwLmRlbW8uZmFjdG9yaWFsLmRldi8ifQ%3D%3D%0A&amp;identity_provider=Microsoft"
+                  <a href="<%= microsoftPath %>"
                     class="button button--lightGrey--outline button--full-width" title="Continue with Microsoft">
                     <div class="sso_button_content">
                       <img alt="Continue with Microsoft" class="sso_button_logo lazyload lazyload--shown lazied"
@@ -124,13 +124,7 @@
               </div>
 
 
-              <form class="form" id="new_user" action="https://api.demo.factorial.dev/users/sign_in"
-                accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token"
-                  value="SXF0gpMwPfoB8HGZVbV2H8YhDHyY0mB9wECHvE4R8wyg//iEIsJLiKxpTlD554iwO0lBvJJeEuJV87wHga3h2g=="
-                  autocomplete="off">
-                <input type="hidden" name="return_host" id="return_host" value="factorial.dev" autocomplete="off">
-                <input type="hidden" name="return_to" id="return_to" value="https://app.demo.factorial.dev/"
-                  autocomplete="off">
+              <form class="form" id="new_user" action="<%= emailPath %>" accept-charset="UTF-8" method="post">
                 <div class="form__row">
                   <div class="text-input">
                     <input autofocus="autofocus" class="text-input__input" required="required" type="email"
@@ -157,8 +151,7 @@
                 </div>
                 <input type="submit" name="commit" value="Sign in"
                   class="js-submit button button--brand button--full-width">
-                <a class="form__saml_link" href="https://api.demo.factorial.dev/saml_login/new">Sign in with SAML
-                  SSO</a>
+                <a class="form__saml_link" href="<%= ssoPath %>">Sign in with SAML SSO</a>
               </form>
             </div>
             <div class="form__footer">

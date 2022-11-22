@@ -1,7 +1,8 @@
 FROM node:gallium-alpine
 
 # Process env
-ENV PORT=3000
+ENV LOCAL_PORT=3000
+ENV SSL_PORT=443
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -16,5 +17,6 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE ${PORT}
+EXPOSE ${LOCAL_PORT}
+EXPOSE ${SSL_PORT}
 CMD [ "npm", "run", "start" ]
