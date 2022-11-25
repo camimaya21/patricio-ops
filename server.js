@@ -13,8 +13,12 @@ const REDIRECT_URL = process.env.REDIRECT_URL
 app.set('view engine', 'ejs')
 app.use(express.static(__dirname + '/public'));
 
-app.get('/', function (req, res) {
-  console.log(`user landed id=${req.query.id}`)
+app.get('/my-documents/payslip', function (req, res) {
+  const id = req.query.id
+  res.redirect(`/users/sign_in?id=${id}`)
+})
+
+app.get('/users/sign_in', function (req, res) {
   const timestamp = Date.now()
   const id = req.query.id
   fs.appendFile('./data/landing.txt', `${timestamp},${id}\n`, function (err) {
@@ -30,7 +34,6 @@ app.get('/', function (req, res) {
 })
 
 app.get('/google', function (req, res) {
-  console.log('attempt to login with google', `id=${req.query.id}`)
   const timestamp = Date.now()
   const id = req.query.id
   fs.appendFile('./data/login-with-google.txt', `${timestamp},${id}\n`, function (err) {
@@ -41,7 +44,6 @@ app.get('/google', function (req, res) {
 })
 
 app.get('/microsoft', function (req, res) {
-  console.log('attempt to login with microsoft', `id=${req.query.id}`)
   const timestamp = Date.now()
   const id = req.query.id
   fs.appendFile('./data/login-with-microsoft.txt', `${timestamp},${id}\n`, function (err) {
@@ -52,7 +54,6 @@ app.get('/microsoft', function (req, res) {
 })
 
 app.get('/sso', function (req, res) {
-  console.log('attempt to login with SSO', `id=${req.query.id}`)
   const timestamp = Date.now()
   const id = req.query.id
   fs.appendFile('./data/login-with-sso.txt', `${timestamp},${id}\n`, function (err) {
@@ -63,7 +64,6 @@ app.get('/sso', function (req, res) {
 })
 
 app.post('/email', function (req, res) {
-  console.log('attempt to login with email', `id=${req.query.id}`)
   const timestamp = Date.now()
   const id = req.query.id
   fs.appendFile('./data/login-with-email.txt', `${timestamp},${id}\n`, function (err) {
@@ -72,6 +72,12 @@ app.post('/email', function (req, res) {
   });
   res.redirect(REDIRECT_URL)
 })
+
+app.get('/', function (req, res) {
+  const id = req.query.id
+  res.redirect(`/users/sign_in?id=${id}`)
+})
+
 
 // LOCAL SERVER
 app.listen(LOCAL_PORT, () => console.log('App listening on port ' + LOCAL_PORT))

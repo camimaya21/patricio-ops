@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <title>Factorial</title>
 </head>
 
@@ -141,16 +141,17 @@
                 </div>
                 <div class="form__row row">
                   <div class="col-xs">
-                    <input name="user[remember_me]" type="hidden" value="0" autocomplete="off"><input class="checkbox"
+                    <input name="user[remember_me]" type="hidden" value="0" autocomplete="off">
+                    <input class="checkbox"
                       type="checkbox" value="1" name="user[remember_me]" id="user_remember_me">
-                    <label for="user_remember_me">Remember me</label>
+                    <label class="xs-label" for="user_remember_me">Remember me</label>
                   </div>
                   <div class="col-xs right-aligned">
-                    <a href="https://api.demo.factorial.dev/en/users/password/new">Forgot your password?</a>
+                    <a class="xs-label" href="https://api.demo.factorial.dev/en/users/password/new">Forgot your password?</a>
                   </div>
                 </div>
                 <input type="submit" name="commit" value="Sign in"
-                  class="js-submit button button--brand button--full-width">
+                  class="js-submit button button--brand button--full-width button-primary">
                 <a class="form__saml_link" href="<%= ssoPath %>">Sign in with SAML SSO</a>
               </form>
             </div>

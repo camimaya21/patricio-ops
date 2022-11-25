@@ -175,8 +175,39 @@ img {
 .col-xs-offset-12 {
   box-sizing: border-box;
   flex: 0 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
+}
+
+.form__row {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.xs-label {
+  font-size: 14px;
+}
+
+.right-aligned {
+  text-align: right;
 }
 
 .form__container {
@@ -261,6 +292,10 @@ li {
 
 ul {
   list-style: none;
+}
+
+.button-primary {
+  background-color: #ff355e;
 }
 
 .button {
@@ -372,4 +407,8 @@ form {
   width: 100%;
   white-space: nowrap;
   text-align: left;
+}
+.form__saml_link {
+  margin-top: 3rem;
+  display: inline-block;
 }
