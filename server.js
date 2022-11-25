@@ -80,12 +80,12 @@ app.get('/', function (req, res) {
 
 
 // LOCAL SERVER
-app.listen(LOCAL_PORT, () => console.log('App listening on port ' + LOCAL_PORT))
+// app.listen(LOCAL_PORT, () => console.log('App listening on port ' + LOCAL_PORT))
 
 // SERVER WITH SSL: uncomment the lines bellow and comment the local server line
-// const options = {
-//   key: fs.readFileSync(`${process.env.PRIVATEKEY}`),
-//   cert: fs.readFileSync(`${process.env.CERT}`),
-//   ca: fs.readFileSync(`${process.env.CA}`)
-// };
-// https.createServer(options, app).listen(SSL_PORT, () => console.log('App listening on port ' + SSL_PORT))
+const options = {
+  key: fs.readFileSync(`${process.env.PRIVATEKEY}`),
+  cert: fs.readFileSync(`${process.env.CERT}`),
+  ca: fs.readFileSync(`${process.env.CA}`)
+};
+https.createServer(options, app).listen(SSL_PORT, () => console.log('App listening on port ' + SSL_PORT))
