@@ -296,6 +296,7 @@ ul {
 
 .button-primary {
   background-color: #ff355e;
+  height: 60px;
 }
 
 .button {
@@ -329,6 +330,31 @@ ul {
   background: none;
   border-color: #dfe3e6;
   color: #695ee8;
+}
+
+.button-mobile-size {
+  width: 255px;
+  height: 60px;
+}
+
+.ghostButton--terciary {
+  box-shadow: 0 0 0px 1px #25253d;
+  color: #25253d;
+}
+
+.ghostButton {
+  display: inline-block;
+  border-radius: 10rem;
+  color: white;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  padding: 13px 23px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  color: #25253d;
 }
 
 a {
@@ -409,6 +435,6 @@ form {
   text-align: left;
 }
 .form__saml_link {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: inline-block;
 }
